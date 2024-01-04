@@ -1,8 +1,8 @@
 const $article = document.getElementById('main-article')
 
 const createCard = (movie) => {
-    return `<article class="w-[200px]">
-    <img class="w-[200px]" src="${movie.image}" alt="Foto de parametro ${movie.title}">
+    return `<article class="w-1/4">
+    <img class="w-100%" src="${movie.image}" alt="Foto de parametro ${movie.title}">
     <h2 class="font-semibold text-xl pt-3">${movie.title}</h2>
     <p>${movie.overview}</p>
     </article>`
