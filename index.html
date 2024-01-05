@@ -5,38 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Movie page">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./media/icons8-claqueta-de-cine-16.png" type="image/x-icon">
     <title>Movie</title>
 </head>
 <body>
     <div class="min-h-screen flex flex-col">
-        <nav class="flex justify-between">
-            <section class="flex p-2.5">
-                <img src="" alt="Logo" class="p-2.5">
-                <h1 class="p-2.5">MOVIESTACK</h1>
+        <nav class="flex justify-between items-center bg-blue-500">
+            <section class="flex p-2.5 ml-2">
+                <img src="./media/icons8-documental-96.png" alt="Logo" class="">
+                <h1 class="p-2.5 flex items-center font-bold text-2xl">MOVIESTACK</h1>
             </section>
-            <ul class="flex p-2.5">
-                <li class="p-2.5"><a href="#">HOME</a></li>
+            <ul class="flex p-2.5 font-bold mr-2 ">
+                <li class="p-2.5 border-2"><a href="#">HOME</a></li>
                 <li class="p-2.5"><a href="./movies.html">MOVIES</a></li>
                 <li class="p-2.5"><a href="#">FAV</a></li>
             </ul>
         </nav>
-        <main class="grow flex flex-wrap px-5 gap-5 justify-center">
-            <section>
-                <img src="" alt="Movies banner">
+        <main class="grow flex flex-wrap px-5 gap-5 justify-center bg-gray-400">
+            <section id="movieBanner" class="min-w-full h-96">
+                <h1 class="text-blue-500 text-7xl font-extrabold ">THIS IS MOVIESTACK</h1>
             </section>
 
-            <article>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum voluptates dignissimos deserunt eveniet hic enim. Ratione, perferendis reprehenderit numquam ipsum praesentium facere sapiente repellendus iusto aliquam autem, non, excepturi ullam.</p>
+            <article class="m-2.5 p-2 ">
+                <p>
+                    You've come to the right place! Our website is dedicated to finding the best movies for you, whether you're looking for something new to watch or you're a fan of a particular genre.
+                </p>
+                <ul class="list-disc m-2.5 italic font-semibold">
+                    <li>New releases</li>
+                    <li>Classics</li>
+                    <li>Independent films</li>
+                    <li>Foreign films</li>
+                    <li>Documentaries</li>
+                </ul>
+                <p>
+                    We also have a variety of features to help you find the perfect movie, including:
+                </p>
+                <ul class="list-disc m-2.5 italic font-semibold">
+                    <li>Movie reviews</li>
+                    <li>Movie trailers</li>
+                    <li>Movie lists</li>
+                    <li>Movie recommendations</li>
+                </ul>
+                <p>
+                    So whether you're looking for a new favorite movie or you just want to be entertained, be sure to check out our website!
+                </p>
             </article>
 
-            <section class="flex justify-between">
-                <a href="./movies.html"><img src="" alt="Movies"></a>
-                <a href="#"><img src="" alt="Fav"></a>
+            <section class="min-w-full m-5" id="sectionPhotos">
+                <a href="./movies.html" class="w-1/3 h-48"><article id="ctaMovies" class=" h-48">
+                    <h2 class="text-white text-2xl font-bold">MOVIES</h2>
+                </article></a>
+                
+                <a href="#" class="w-1/3 h-48"><article id="ctaFavs" class="h-48">
+                    <h2 class="text-black text-2xl font-bold">FAVORITES</h2>
+                </article></a>
             </section>
 
         </main>
-        <footer class="text-center text-gray-400">
+        <footer class="text-center text-gray-800 font-semibold bg-blue-500 p-5">
             <p>MindHub - Cohort N53</p>
         </footer>
 
