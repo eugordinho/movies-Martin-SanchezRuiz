@@ -29,14 +29,32 @@ function filterMoviebeByTitle( movies, inputTitle ) {
     return movies.filter( movie => movie.title.toLowerCase().includes( inputTitle.value.toLowerCase() ) )
 }
 
+const filterByGenre = (movies, select) =>{
+    return movies.filter( movie => {
+        for( genre of movie.genres){
+            if ( genre == select.value) {
+                return true
+            }
+        }
+    } )    
+}
+
+filterByGenre(movies, $select)
+
 movies.forEach( movie => $article.innerHTML += createCard(movie) )
 
 $movieSearch.addEventListener( 'input', () => {
     const filteredMovies = filterMoviebeByTitle( movies, $movieSearch )
-
+    
     $article.innerHTML = ''
 
     filteredMovies.forEach( movie => $article.innerHTML += createCard(movie) )
 })
 
+$select.addEventListener( "input", () => {
+    const filteredByGenres = filterByGenre(movies, $select)
+    
+    $article.innerHTML = ''
 
+    filteredByGenres.forEach( movie => $article.innerHTML += createCard(movie) )
+})
