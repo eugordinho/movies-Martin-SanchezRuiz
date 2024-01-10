@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Movie page">
+    <link rel="stylesheet" href="./style.css">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="./media/Moviestack_favicon.png" type="image/x-icon">
     <title>Movie</title>
@@ -17,32 +18,24 @@
             </section>
             <ul class="flex p-2.5 font-bold mr-2 ">
                 <li class="p-2.5"><a href="./index.html">HOME</a></li>
-                <li class="p-2.5 border-2"><a href="#">MOVIES</a></li>
+                <li class="p-2.5"><a href="./movies.html">MOVIES</a></li>
                 <li class="p-2.5"><a href="#">FAV</a></li>
             </ul>
         </nav>
-        <main class="bg-gray-400">
-            <h1 class="flex justify-center text-5xl my-7 mx-5 p-8 font-bold border-2 bg-blue-500">MOVIES</h1>
 
-            <search class="flex justify-center gap-5">
-                <select name="" id="select" class="w-64 p-1">
-                    <option value="">Genre</option>
-                </select>
-
-                <input type="text" id="movieSearch" class="w-64">
-            </search>
-
-            <article id="main-article" class="flex justify-evenly flex-wrap items-center">
-                
-            </article>
-            
+        <main class="">
+            <div id="titleContainer" class="flex flex-col justify-center items-center">
+                            
+            </div>
         </main>
+
         <footer class="text-center text-gray-800 font-semibold bg-blue-500 p-5">
             <p>MindHub - Cohort N53</p>
+        
         </footer>
 
         <script src="./data.js"></script>
-        <script src="./app.js"></script>
+        <script src="./modules/modules.js"></script>
     </div>
 </body>
 </html>

@@ -1,18 +1,10 @@
-#movieBanner{
-    background-image: url("https://i.blogs.es/2a9439/avengers_endgame_analisis_problema_marvel/1366_2000.jpeg");
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 #ctaMovies {
     background-image: url("https://miro.medium.com/v2/resize:fit:700/1*CIdcVDW1LiFN5NN_8gK5Ig.jpeg");
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;;
     
 }
 
@@ -22,11 +14,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;;
 }
 
 #sectionPhotos{
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+
+td, tr{
+    border: solid black;
+    padding: 5px;
+    width: 13rem;
+    
 }
