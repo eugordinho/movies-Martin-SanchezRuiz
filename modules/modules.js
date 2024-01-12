@@ -17,7 +17,7 @@ $titleContainer.innerHTML = `
     </article>
 </div>
 
-<div class="flex m-5 w-1/2 justify-between">
+<div class="flex m-5 w-2/3 gap-5">
     <table>
         <tbody>
             <tr>

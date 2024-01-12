@@ -1,4 +1,4 @@
-/* import { filterMoviebeByTitle, } from './modules/modules.js' */
+/* import { filterMovieByTitle, } from './modules/modules.js' */
 
 const $article = document.getElementById('main-article')
 
@@ -25,18 +25,27 @@ movies.forEach( movie => {
 
 genresSet.forEach( genre => $select.innerHTML += `<option value="${genre}">${genre}</option>` )
 
-function filterMoviebeByTitle( movies, inputTitle ) {
+function filterMovieByTitle( movies, inputTitle ) {
     return movies.filter( movie => movie.title.toLowerCase().includes( inputTitle.value.toLowerCase() ) )
 }
 
 const filterByGenre = (movies, select) =>{
-    return movies.filter( movie => {
-        for( genre of movie.genres){
-            if ( genre == select.value) {
-                return true
-            }
+        if(select.value == "all"){
+            console.log("aaaa")
+            return movies
+        } else{
+            const filteredMovies = movies.filter( movie => {
+                for( genre of movie.genres){
+                    if ( genre == select.value) {
+                        
+                        return movie
+                    }
+                }
+            } )
+
+            return filteredMovies
         }
-    } )    
+                
 }
 
 filterByGenre(movies, $select)
@@ -44,7 +53,10 @@ filterByGenre(movies, $select)
 movies.forEach( movie => $article.innerHTML += createCard(movie) )
 
 $movieSearch.addEventListener( 'input', () => {
-    const filteredMovies = filterMoviebeByTitle( movies, $movieSearch )
+
+    const filteredByGenres = filterByGenre(movies, $select)
+
+    const filteredMovies = filterMovieByTitle( filteredByGenres, $movieSearch )
     
     $article.innerHTML = ''
 
@@ -52,7 +64,9 @@ $movieSearch.addEventListener( 'input', () => {
 })
 
 $select.addEventListener( "input", () => {
-    const filteredByGenres = filterByGenre(movies, $select)
+    const filteredMovies = filterMovieByTitle( movies, $movieSearch )
+
+    const filteredByGenres = filterByGenre( filteredMovies, $select )
     
     $article.innerHTML = ''
 

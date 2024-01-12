@@ -9,7 +9,7 @@
     <title>Moviestack</title>
 </head>
 <body>
-    <div class="min-h-screen flex flex-col ">
+    <div class="min-h-screen w-full flex flex-col ">
         <nav class="flex justify-between items-center bg-blue-500 font-mono">
             <section class="flex p-2.5 ml-2">
                 <img src="./media/Moviestack_isotipo.png" alt="Logo" class="w-36 h-36">
@@ -21,12 +21,12 @@
                 <li class="p-2.5"><a href="#">FAV</a></li>
             </ul>
         </nav>
-        <main class="bg-gray-400">
+        <main class="grow bg-gray-400">
             <h1 class="flex justify-center text-5xl my-7 mx-5 p-8 font-bold border-2 bg-blue-500">MOVIES</h1>
 
             <search class="flex justify-center gap-5">
-                <select name="" id="select" class="w-64 p-1">
-                    
+                <select id="select" class="w-64 p-1">
+                    <option value="all" class="font-bold">Genres</option>
                 </select>
 
                 <input type="text" id="movieSearch" class="w-64">
