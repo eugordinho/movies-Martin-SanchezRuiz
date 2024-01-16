@@ -42,7 +42,6 @@ fetch( "https://moviestack.onrender.com/api/movies", init )
 
         filteredMovies.forEach( movie => $article.innerHTML += createCard(movie) )
     })
-
     
     $select.addEventListener( "input", () => {
         const filteredMovies = filterMovieByTitle( movies, $movieSearch )
