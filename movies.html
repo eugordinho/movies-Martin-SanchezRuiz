@@ -6,6 +6,7 @@
     <meta name="description" content="Movie page">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="./media/Moviestack_favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
     <title>Moviestack</title>
 </head>
 <body>
@@ -18,14 +19,16 @@
             <ul class="flex p-2.5 font-bold mr-2 ">
                 <li class="p-2.5"><a href="./index.html">HOME</a></li>
                 <li class="p-2.5 border-2"><a href="#">MOVIES</a></li>
-                <li class="p-2.5"><a href="#">FAV</a></li>
+                <li class="p-2.5"><a href="./favorites.html">FAV</a></li>
             </ul>
         </nav>
         <main class="grow bg-gray-400">
             <h1 class="flex justify-center text-5xl my-7 mx-5 p-8 font-bold border-2 bg-blue-500">MOVIES</h1>
 
             <search class="flex justify-center gap-5">
-                <select id="select" class="w-64 p-1">
+
+                <select name="" id="select" class="w-64 p-1">
+
                     <option value="all" class="font-bold">Genres</option>
                 </select>
 
@@ -41,8 +44,7 @@
             <p>MindHub - Cohort N53</p>
         </footer>
 
-        <script src="./data.js"></script>
-        <script src="./app.js"></script>
+        <script type="module" src="./app.js"></script>
     </div>
 </body>
 </html>

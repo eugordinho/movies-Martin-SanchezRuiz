@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Movie page">
-    <link rel="stylesheet" href="./style.css">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="./media/Moviestack_favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
     <title>Moviestack</title>
 </head>
 <body>
-    <div class="min-h-screen w-full flex flex-col ">
+    <div class="min-h-screen flex flex-col ">
         <nav class="flex justify-between items-center bg-blue-500 font-mono">
             <section class="flex p-2.5 ml-2">
                 <img src="./media/Moviestack_isotipo.png" alt="Logo" class="w-36 h-36">
@@ -18,23 +18,23 @@
             </section>
             <ul class="flex p-2.5 font-bold mr-2 ">
                 <li class="p-2.5"><a href="./index.html">HOME</a></li>
-                <li class="p-2.5"><a href="./movies.html">MOVIES</a></li>
-                <li class="p-2.5"><a href="./favorites.html">FAV</a></li>
+                <li class="p-2.5 "><a href="./movies.html">MOVIES</a></li>
+                <li class="p-2.5 border-2"><a href="#">FAV</a></li>
             </ul>
         </nav>
+        <main class="bg-gray-400">
+            <h1 class="flex justify-center text-5xl my-7 mx-5 p-8 font-bold border-2 bg-blue-500">FAVORITES</h1>
 
-        <main class="grow w-full bg-gray-400">
-            <div id="titleContainer" class="flex flex-col justify-center items-center">
-                            
-            </div>
+            <article id="main-article-favorites" class="flex justify-evenly flex-wrap items-center">
+                
+            </article>
+            
         </main>
-
-        <footer class="text-center text-gray-800 font-semibold bg-blue-500 p-5 ">
+        <footer class="text-center text-gray-800 font-semibold bg-blue-500 p-5">
             <p>MindHub - Cohort N53</p>
-        
         </footer>
 
-        <script type="module" src="./movieDetails.js"></script>
+        <script type="module" src="./favorites.js"></script>
     </div>
 </body>
 </html>
